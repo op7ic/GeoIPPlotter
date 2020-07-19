@@ -105,21 +105,6 @@ def generate_map(output, lats=[], lons=[], plottype=None, wesn=None,plotdest=Non
         # save to file
         plt.savefig(output, dpi=1200, bbox_inches='tight')
 
-    if (plottype == "heatmap"):
-        # TODO - fix this function, its not 100% accurate right now
-        min_marker_size = 1
-        for keys in test_long_lat.keys():
-            for a,b in zip(keys,test_long_lat[keys]):
-                x,y = m(b['lons'], b['lats'])
-                try:
-                    if a == 0:
-                        msize = 1 * min_marker_size
-                    else:
-                        msize = a * min_marker_size
-                    m.plot(x, y,'ro', markersize=msize)
-                except: 
-                    continue
-        plt.savefig(output, dpi=1200, bbox_inches='tight')
 
 def main():
     arguments = argparse.ArgumentParser(description='Visualize IP addresses on the map')
