@@ -6,6 +6,7 @@ This script currently supports the following plot types:
 - [Scatter plot](https://matplotlib.org/3.2.2/api/_as_gen/matplotlib.pyplot.scatter.html)
 - [Bubble map](https://matplotlib.org/3.2.2/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot)
 - [Connection map](https://en.wikipedia.org/wiki/Great_circle)
+- Basic heatmap
 
 ## Prerequisites 
 
@@ -74,9 +75,17 @@ To generate connectionmap against specific LON/LAT (useful for showing that **we
 ```bash
 python3 geoipplotter.py -t connectionmap --db /tmp/GeoLite2-City.mmdb -i sourceip.txt -o connectionmap.png -d 51.50/0.12
 ```
-
+To generate heatmap:
+```bash
+python3 geoipplotter.py -t heatmap --db /tmp/GeoLite2-City.mmdb -i sourceip.txt -o connectionmap.png -d 51.50/0.12
+```
 ## Example output
 
 ![Alt text](samples/scatter.png?raw=true "Scatter plot of IPs")
 ![Alt text](samples/bubble.png?raw=true "Bubble plot of IPs")
 ![Alt text](samples/connectionmap.png?raw=true "Connection map plot of IPs")
+![Alt text](samples/heatmap.png?raw=true "Heat map plot of IPs")
+
+## TODO
+
+- [ ] Heatmap function need better coding
