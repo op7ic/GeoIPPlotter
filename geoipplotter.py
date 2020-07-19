@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
+# Based on: http://introtopython.org/visualization_earthquakes.html
+# Based on: https://github.com/pieqq/PyGeoIpMap
 
 import argparse
 import contextlib
@@ -68,7 +70,7 @@ def generate_map(output, lats=[], lons=[], plottype=None, wesn=None,plotdest=Non
     else:
         m = Basemap(projection='cyl', resolution='l')
     #m.bluemarble()
-    #m.drawstates(linewidth=0.1, color="black")
+    m.drawstates(linewidth=0.1, color="black")
     # plot type
     m.drawlsmask()
     # draw country map
@@ -98,6 +100,7 @@ def generate_map(output, lats=[], lons=[], plottype=None, wesn=None,plotdest=Non
             m.drawgreatcircle(value['lons'],value['lats'],dst[0],dst[1], linewidth=0.1, color='#CA002A')
         # save to file
         plt.savefig(output, dpi=1200, bbox_inches='tight')
+
         
 
 def main():
