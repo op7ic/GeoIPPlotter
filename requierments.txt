@@ -1,0 +1,5 @@
+https://github.com/matplotlib/basemap.git
+matplotlib
+numpy
+pillow
+pygeoip
