@@ -6,6 +6,7 @@
 # Based on: https://github.com/pieqq/PyGeoIpMap
 # Based on: https://www.kaggle.com/daveianhickey/using-basemap-for-geographical-data
 # Based on: https://www.dkrz.de/up/services/analysis/visualization/sw/python-matplotlib/matplotlib-sourcecode/python-matplotlib-example-contour-filled-plot
+# Based on: https://basemaptutorial.readthedocs.io/en/latest/plotting_data.html
 
 
 # Imports
@@ -20,9 +21,11 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.basemap import Basemap
 import geoip2.database
 from matplotlib import cm
+from numpy import array
+import matplotlib.colors as colors
 
 # Adopted from https://stackoverflow.com/questions/10664856/make-a-dictionary-with-duplicate-keys-in-python
-# This class will allow us to store multiple iterations of the samle lat/lon for specific IP so we can establish weight when using Heatmap module
+# This class will allow us to store multiple iterations of the samle lat/lon for specific IP so we can establish weight
 class DictList(dict):
     def __setitem__(self, key, value):
         try:
@@ -167,6 +170,11 @@ def generate_map(output, lats=[], lons=[], plottype=None, wesn=None,plotdest=Non
 
         # save to file
         plt.savefig(output, dpi=1200, bbox_inches='tight')
+
+    if (plottype == "hexbin"):
+        x,y = m(lons,lats)
+        m.hexbin(array(x), array(y), gridsize=40, mincnt=1, cmap='jet',norm=colors.LogNorm(),linewidths=0.1)
+        plt.savefig(output, dpi=1200, bbox_inches='tight')
             
 
 def main():
@@ -175,7 +183,7 @@ def main():
     arguments.add_argument('-o', '--output', default='output.png', help='Path to save the file (e.g. /tmp/output.png)')
     arguments.add_argument('-db', '--db', default=None, help='Full path to MaxMind GeoLite2-City.mmdb database file (download from https://dev.maxmind.com/geoip/geoip2/geolite2/)')
     arguments.add_argument('-e','--extents', default=None, help='Extents for the plot (west/east/south/north). Default to globe.')
-    arguments.add_argument("-t","--type", default="scatter", help="Plot type scatter, bubble, connectionmap, heatmap")
+    arguments.add_argument("-t","--type", default="scatter", help="Plot type scatter, bubble, connectionmap, heatmap, hexbin")
     arguments.add_argument("-d","--destination", default=None, help="When connectionmap line plot is used, add latitude and longitude as destination (i.e. -d 51.50/0.12)")
     args = arguments.parse_args()
 

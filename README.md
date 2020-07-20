@@ -46,7 +46,7 @@ optional arguments:
   -e EXTENTS, --extents EXTENTS
                         Extents for the plot (west/east/south/north). Default
                         to globe.
-  -t TYPE, --type TYPE  Plot type scatter, bubble, connectionmap, heatmap
+  -t TYPE, --type TYPE  Plot type scatter, bubble, connectionmap, heatmap,hexbin
   -d DESTINATION, --destination DESTINATION
                         When connectionmap line plot is used, add latitude and
                         longitude as destination (i.e. -d 51.50/0.12)
@@ -83,6 +83,11 @@ To generate heatmap plot:
 ```bash
 python3 geoipplotter.py -t heatmap --db /tmp/GeoLite2-City.mmdb -i sourceip.txt -o heatmap.png
 ```
+To generate hexbin plot:
+```bash
+python3 geoipplotter.py -t hexbin --db /tmp/GeoLite2-City.mmdb -i sourceip.txt -o hexbin.png
+```
+
 
 ## Example output
 
@@ -101,6 +106,10 @@ python3 geoipplotter.py -t heatmap --db /tmp/GeoLite2-City.mmdb -i sourceip.txt 
 **Heatmap plot of IPs**
 
 ![Alt text](samples/heatmap.png?raw=true "Heatmap plot of IPs")
+
+**Hexbin plot of IPs**
+
+![Alt text](samples/hexbin.png?raw=true "Hexbin plot of IPs")
 
 ## TODO
 
