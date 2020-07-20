@@ -41,7 +41,7 @@ optional arguments:
   -e EXTENTS, --extents EXTENTS
                         Extents for the plot (west/east/south/north). Default
                         to globe.
-  -t TYPE, --type TYPE  Plot type scatter, bubble, connectionmap
+  -t TYPE, --type TYPE  Plot type scatter, bubble, connectionmap, heatmap
   -d DESTINATION, --destination DESTINATION
                         When connectionmap line plot is used, add latitude and
                         longitude as destination (i.e. -d 51.50/0.12)
@@ -50,13 +50,13 @@ optional arguments:
 ## Common Extends
 To zoom towards specific continent use ```-e``` parameter with approximate location flags:
 
-Europe - ``` -12/45/30/65 ```
-Middle East - ``` 10/80/-10/60 ```
-Africa + Middle East - ``` -20/90/-60/40 ```
-Africa - ``` -20/55/-60/40 ```
-South America - ``` -100/-30/-60/40 ```
-North America - ```  -200/-40/1/90 ```
-Americas (North + South) - ``` -200/-20/-60/90 ```
+- Europe - ``` -12/45/30/65 ```
+- Middle East - ``` 10/80/-10/60 ```
+- Africa + Middle East - ``` -20/90/-60/40 ```
+- Africa - ``` -20/55/-60/40 ```
+- South America - ``` -100/-30/-60/40 ```
+- North America - ```  -200/-40/1/90 ```
+- Americas (North + South) - ``` -200/-20/-60/90 ```
 
 If argument parsing throws an error around input because it doesn't like extra ```-``` use double quotes to pass appropriate parameter i.e. ```-e " -100/-30/-60/40"```
 
