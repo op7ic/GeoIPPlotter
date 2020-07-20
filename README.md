@@ -83,12 +83,19 @@ python3 geoipplotter.py -t heatmap --db /tmp/GeoLite2-City.mmdb -i sourceip.txt 
 ## Example output
 
 **Scatter plot of IPs**
+
 ![Alt text](samples/scatter.png?raw=true "Scatter plot of IPs")
+
 **Bubble plot of IPs**
+
 ![Alt text](samples/bubble.png?raw=true "Bubble plot of IPs")
+
 **Connection map plot of IPs**
+
 ![Alt text](samples/connectionmap.png?raw=true "Connection map plot of IPs")
+
 **Heatmap plot of IPs**
+
 ![Alt text](samples/heatmap.png?raw=true "Heatmap plot of IPs")
 
 ## TODO
