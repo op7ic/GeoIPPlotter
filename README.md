@@ -1,6 +1,6 @@
 # GeoIPPlotter
 
-GeoIP plotting script written in Python to help security teams draw visualized reports from IP addresses. This script is based on already existing excellent [PyGeoIPMap](https://github.com/pieqq/PyGeoIpMap) project with some additions towards extended plotting capabilities.
+GeoIP plotting script written in Python to help security teams draw visualized reports from IP addresses. This script is based on already existing excellent [PyGeoIPMap](https://github.com/pieqq/PyGeoIpMap) project with some additions towards extended plotting capabilities in offline mode using MaxMind GeoIP database.
 
 This script currently supports the following plot types:
 - [Scatter plot](https://matplotlib.org/3.2.2/api/_as_gen/matplotlib.pyplot.scatter.html)
@@ -74,12 +74,17 @@ To generate connectionmap against specific LON/LAT (useful for showing that **we
 ```bash
 python3 geoipplotter.py -t connectionmap --db /tmp/GeoLite2-City.mmdb -i sourceip.txt -o connectionmap.png -d 51.50/0.12
 ```
+To generate heatmap plot:
+```bash
+python3 geoipplotter.py -t heatmap --db /tmp/GeoLite2-City.mmdb -i sourceip.txt -o heatmap.png
+```
 
 ## Example output
 
 ![Alt text](samples/scatter.png?raw=true "Scatter plot of IPs")
 ![Alt text](samples/bubble.png?raw=true "Bubble plot of IPs")
 ![Alt text](samples/connectionmap.png?raw=true "Connection map plot of IPs")
+![Alt text](samples/heatmap.png?raw=true "Heatmap plot of IPs")
 
 ## TODO
 
