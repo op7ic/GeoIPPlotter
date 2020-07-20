@@ -4,3 +4,4 @@ pillow
 pygeoip
 pyproj
 pyshp
+geoip2
