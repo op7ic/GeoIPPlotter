@@ -20,7 +20,7 @@ Install the following prerequsites:
 The following command line should take care of prerequisites on Debian/Ubuntu:
 
 ```
-apt-get install libgeos-dev python3-dev && pip3 install -U git+https://github.com/matplotlib/basemap.git && pip3 install -r requirements.txt
+apt-get install libgeos-dev python3-dev && pip3 install -U git+https://github.com/matplotlib/basemap.git && pip3 install -r requierments.txt
 ```
 
 ## Usage
