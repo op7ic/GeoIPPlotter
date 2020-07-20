@@ -58,7 +58,7 @@ To zoom towards specific continent use ```-e``` parameter with approximate locat
 - North America - ```  -200/-40/1/90 ```
 - Americas (North + South) - ``` -200/-20/-60/90 ```
 
-If argument parsing throws an error around input because it doesn't like extra ```-``` use double quotes to pass appropriate parameter i.e. ```-e " -100/-30/-60/40"```
+If argument parsing throws an error around input, it might not like extra ```-``` use double quotes to pass appropriate parameter i.e. ```-e " -100/-30/-60/40"```
 
 ## Example Use
 
