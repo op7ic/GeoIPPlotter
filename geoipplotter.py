@@ -22,7 +22,7 @@ import geoip2.database
 from matplotlib import cm
 
 # Adopted from https://stackoverflow.com/questions/10664856/make-a-dictionary-with-duplicate-keys-in-python
-# This class will allow us to store multiple iterations of the samle lat/lon for specific IP so we can establish weight
+# This class will allow us to store multiple iterations of the samle lat/lon for specific IP so we can establish weight when using Heatmap module
 class DictList(dict):
     def __setitem__(self, key, value):
         try:
