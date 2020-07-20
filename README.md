@@ -7,6 +7,7 @@ This script currently supports the following plot types:
 - [Bubble map](https://matplotlib.org/3.2.2/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot)
 - [Connection map](https://en.wikipedia.org/wiki/Great_circle)
 - [Heatmap](http://introtopython.org/visualization_earthquakes.html)
+- [Hexbin](https://matplotlib.org/3.1.0/gallery/statistics/hexbin_demo.html)
 
 ## Prerequisites 
 
