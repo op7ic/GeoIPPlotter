@@ -12,6 +12,7 @@ This script currently supports the following plot types:
 
 Install the following prerequsites:
 
+* Python3
 * [numpy](http://www.numpy.org/)
 * [matplotlib](http://matplotlib.org/)
 * [Basemap](http://matplotlib.org/basemap/)
